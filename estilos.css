@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*Te hace falta poner el @import!!! sin eso se ve todo en times new roman. Cuando estés en google fonts te da el link, revisa el apunte de fuentes. También podés establecer en el selector universal (*) cuál va a ser la familia tipográfica que más se usa para que la tome el documento en su totalidad, y establecer casos puntuales en la etiqueta correspondiente, por ejemplo el uso que le das a Ubuntu*/
+
 *{
 	margin: 0px;
 	padding: 0px;
@@ -8,10 +10,10 @@
 
 #cabecera {
 	width: 100%;
-	height: 400px;
+	height: 400px; /* no está bueno tener alturas fijas, en general el tamaño de las cosas los tiene que dar el mismo contenido */
 	background-color: #CAECA7;
 	background-attachment:fixed;
-}
+} /* guarda que en la línea 116 también estás llamando a la cabecera!!! tienen que estar todas las propiedades juntas, dejá la cabecera acá pero tenés que elegir cuál es la mejor forma*/
 header {
 	background-color: white;
 	padding: 10px 20px;
@@ -27,25 +29,37 @@ h1 {
 }
 .botonera {
 	width: 100%;
-	height: 50px;
+	height: 50px; /* no está bueno tener alturas fijas, en general el tamaño de las cosas los tiene que dar el mismo contenido */
 	background-color:#C7E9B2;
 	padding-top: 33px;
 	padding-left: 1px;
 	padding-right: 1px;
-}
+} /* buen comienzo con los porcentajes, ahora hay un problema, está tomando el 100% de la página + 1 pixel de padding left + 1 pixel de padding right, lo que nos da de resultado, por ejemplo, si tengo una pantalla de 1920px de ancho, el tamaño de la botonera va a ser de 1922px porque no tiene ese extra en cuenta, lo que va a hacer que tengas scroll horizontal y eso es un error bastante grande. Para solucionar este problema, podés agregar la propiedad "box-sizing: border-box;" que establece "el tamaño de la caja tiene que tener en cuenta el borde que tengan margin y padding"
+
+También hay otra forma de tener mejor los paddings, en lugar de poner top left y right individualmente podés hacerlo en una sola línea así:
+
+padding: 30px 1px 0 1px;
+
+donde el primer valor pertenere a top, el segundo a right, el tercero a bottom, y el cuarto a left. También hay otra forma:
+
+padding: 30px 1px;
+
+donde el primer valor pertence a top y bottom, y el segundo a left y right. Esta segunda opción va a quedar mucho mejor con tu tp
+
+*/
 
 nav ul {
 	list-style: none;
-	padding-left:618px;
+	padding-left:618px; /*este padding es un montón, como regla general, si tu padding supera los 100px es muy probable que estés acomodando las cosas y no separandolas, y haya una opción más prolijas con flexbox. Acordate que el contenedor padre es el que ordena, así que probablemente el flex lo tenga el nav, y se lo tengas que aplicar a la botonera */
 }
 
 nav ul li {
-	display: inline;
+	display: inline; /* empezá a cambiar los inline por propiedades de flexbox */
 }
 
 .botonera a {
 	text-decoration: none;
-	color: #000;
+	color: #000; /*el color está mal, le faltan dígitos*/
 	padding: 10px 20px;
 	border: 1.5px solid white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -53,13 +67,13 @@ nav ul li {
 }
 
 .botonera a:hover {
-	color: #fff;
+	color: #fff; /*el color está mal, le faltan dígitos*/
 	background-color:#A9D898;
 }
 
 .botonera a:active {
 	background-color:#8E452D;
-	color: #fff;
+	color: #fff; /*el color está mal, le faltan dígitos*/
 }
 
 .container {
@@ -70,10 +84,10 @@ nav ul li {
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
-	position: relative;
+	position: relative; /*este position no está haciendo nada*/
 }
 .profile-image {
-	float: left;
+	float: left; /* float es una propiedad que va a quedar muy incómoda cuando veamos responsive. para lograr que la imagen esté al lado del div "info" necesitás aplicar flex al contenedor padre*/
 	width: 120px;
 	height: 120px;
 	border-radius: 100%;
@@ -83,10 +97,10 @@ nav ul li {
 .profile-image img {
 	width: 100%;
 	height: 100%;
-	object-fit:cover;
+	object-fit:cover; /* lo ideal con la imagen es que la edites por fuera del código y que tenga el tamaño final de la foto, hacela cuadradad para que quede bien, el border radius está bien */
 }
 .info {
-	margin-left: 180px;
+	margin-left: 180px; /* mucho padding por aca!!! */
 }
 h2 {
 	margin-top: 0;
@@ -121,7 +135,7 @@ h2 {
 
 section {
 	padding: 40px;
-	width: 400px;
+	width: 400px; /* es más eficiente usar la propiedad "max-width" para medidas fijas cuando el width supera los 300px porque cuando pasemos a mobile esto va a molestar un montón */
 	border: 0.5px solid #6EBB91;
 	margin: 20px;
 	border-radius: 10px;
@@ -137,7 +151,7 @@ p {
 }
 
 .cards {
-	display: flex;
+	display: flex; /* acá funcionaría muy bien la propiedad de wrap, fijate cómo funciona con el inspector y si podés mejorarlo con alguna otra propiedad de flex*/
 }
 
 footer {
@@ -149,4 +163,4 @@ footer {
 	justify-content: flex-end;
 	margin-top: 60px;
 	color: white;
-}
+} /* en el footer también hay scroll horizontal y necesitamos la propiedad de box-sizing, seguramente cuando lo apliques necesites agrandar los paddings*/
