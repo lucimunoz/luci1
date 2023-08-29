@@ -6,13 +6,15 @@
 <link href="estilos.css" rel="stylesheet" type="text/css">
 </head>
 
+<!-- Aunque hay que seguir mejorando hubieron muy buenos avances. Necesitamos que actives github pages para que podamos visualizar el tp sin tener que descargarlo. En general hay que mejorar el indentado en varios lugares pero la semántica está bastante bien lograda. Hay correcciones puntuales en todo el documento y en css para que corrijas, la mayoría de indentado. Un error bastante grande es el nombre de los archivos, no pueden tener mayúsculas, en este caso la carpeta de las imágenes y tu foto. -->
+
 <body>
 	<header id="cabecera">
-	  <h1>Mi CV</h1>
+	  <h1>Mi CV</h1> <!-- indentado, también hay un error, se supone que el h1 es el título de todo el documento y la información que va a traer en primer lugar un buscador, por ejemplo, si en google busco CV van a aparecer millones de resultados, pero algo más partucular como tu nombre seguramente los resultados se reduzcan. Además está muy oculto, yo directamente lo quitaría y pondría dentro del header el nav -->
 	</header>
 	<nav class="botonera">
 		<ul>
-			<li><a href="#">Sobre m&iacute;</a></li>
+			<li><a href="#">Sobre m&iacute;</a></li> <!-- aprovechando que les pusiste ids a las sections, podrías poner en los href el nombre de cada sección para que redirija a esa parte -->
 			<li><a href="#">Educaci&oacute;n</a></li>
 			<li><a href="#">Idioma</a></li>
 			<li><a href="#">Trabajo</a></li>
@@ -21,12 +23,12 @@
 		</ul>
 	</nav>
 	<main>
-	<div class="container">
+	<div class="container"> 
 		<div class="profile-image">
-			<img src="Img/Lusentada.jpg" alt="Lusentada">
+			<img src="Img/Lusentada.jpg" alt="Lusentada"> <!-- falta el tamaño de la imagen y además cambiarle el nombre en minúscula, también deberías editar la foto en ps para que quede del tamaño que querés que se muestre en la página -->
 		</div>
 		<div class="info">
-		<h2>Lucía Ayelén Muñoz</h2>
+		<h2>Lucía Ayelén Muñoz</h2> <!-- indentado -->
 			<p>Edad: 21 años</p>
 			<p>Nacimiento: 24/06/2002</p>
 			<p>Argentina, Buenos Aires, Banfield</p>
@@ -34,29 +36,29 @@
 			<p>Contacto: +54 1130772406</p>
 		</div>
 	</div>
-	<article>
-	<div class="cards">
+	<article> <!-- todo el indentado del article -->
+	<div class="cards"> <!-- este div no está cumpliendo ninguna función, aunque sí tiene varias propiedades, si no estuviera y le damos a article las mismas propiedades seguiría funcionando igual. te recomiendo cambiar la class al article y borrar el div -->
 	<section id="sobre-mi">
 		<h3>Sobre mí</h3>
-			<p>Me llamo Luc&iacute;a, soy estudiante de la carrera diseño y comunicación visual en la Universidad de Lan&uacute;s. Soy una persona que busca afrontar una nueva etapa dispuesta a poner en valor todos mis conocimientos y habilidades. Busco aprender y superarme d&iacute;a a d&iacute;a. Tambi&eacute;n soy amante de los juegos online y el dise&ntilde;o de personajes para ellos.</p>
+			<p>Me llamo Luc&iacute;a, soy estudiante de la carrera diseño y comunicación visual en la Universidad de Lan&uacute;s. Soy una persona que busca afrontar una nueva etapa dispuesta a poner en valor todos mis conocimientos y habilidades. Busco aprender y superarme d&iacute;a a d&iacute;a. Tambi&eacute;n soy amante de los juegos online y el dise&ntilde;o de personajes para ellos.</p> <!-- indentado -->
 	</section>
 	<section id="educacion">
 		<h3>Educación</h3>
-			<p>Escolarizada con Secundario Completo. Instituto Sagrada Familia, Banfield, 2019.</p>
-			<p>Licenciatura en Diseño y Comunicación Visual, actualmente en curso. Universidad Nacional de Lanús, 2020.</p>
+			<p>Escolarizada con Secundario Completo. Instituto Sagrada Familia, Banfield, 2019.</p> <!-- indentado -->
+			<p>Licenciatura en Diseño y Comunicación Visual, actualmente en curso. Universidad Nacional de Lanús, 2020.</p> <!-- indentado -->
 	</section>
 	<section id="idioma">
 		<h3>Idioma</h3>
-			<p>Espa&ntilde;ol - Oral y escrito nativo.</p>
-			<p>Inglés - Oral y escrito avanzado.</p>
+			<p>Espa&ntilde;ol - Oral y escrito nativo.</p> <!-- indentado -->
+			<p>Inglés - Oral y escrito avanzado.</p> <!-- indentado -->
 	</section>
 	<section id="trabajo">
 		<h3>Trabajo</h3>
-			<p>Actualmente me encuentro en una nueva etapa trabajando para la empresa Mercado Libre S.R.L como Representante de Customer Experience. Ingres&eacute; a la empresa a principios de Abril del a&ntilde;o 2023. </p>
+			<p>Actualmente me encuentro en una nueva etapa trabajando para la empresa Mercado Libre S.R.L como Representante de Customer Experience. Ingres&eacute; a la empresa a principios de Abril del a&ntilde;o 2023. </p> <!-- indentado -->
 	</section>
 	<section id="informatica">
 		<h3>Inform&aacute;tica</h3>
-			<p>▶ MS Office (Word, Power Point, Excel) Conocimiento básico.</p>
+			<p>▶ MS Office (Word, Power Point, Excel) Conocimiento básico.</p> <!-- si estos son items y se ven como una lista, sería mejor utilizar ol o ul -->
 			<p>▶ Google Drive (Docs, Forms, Gmail, Drive) Conocimiento básico.</p>
 			<p>▶ Adobe (Illustrator, InDesign, Photoshop) Conocimiento intermedio.</p>
 			<p>▶ Redes Sociales (Facebook, Twitter, Instagram, TikTok, Pinterest) Conocimiento intermedio.</p>
