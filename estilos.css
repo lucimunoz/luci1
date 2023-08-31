@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
 
 /*Te hace falta poner el @import!!! sin eso se ve todo en times new roman. Cuando estés en google fonts te da el link, revisa el apunte de fuentes. También podés establecer en el selector universal (*) cuál va a ser la familia tipográfica que más se usa para que la tome el documento en su totalidad, y establecer casos puntuales en la etiqueta correspondiente, por ejemplo el uso que le das a Ubuntu*/
 
@@ -10,10 +11,12 @@
 
 #cabecera {
 	width: 100%;
-	height: 400px; /* no está bueno tener alturas fijas, en general el tamaño de las cosas los tiene que dar el mismo contenido */
-	background-color: #CAECA7;
-	background-attachment:fixed;
-} /* guarda que en la línea 116 también estás llamando a la cabecera!!! tienen que estar todas las propiedades juntas, dejá la cabecera acá pero tenés que elegir cuál es la mejor forma*/
+ /* no está bueno tener alturas fijas, en general el tamaño de las cosas los tiene que dar el mismo contenido */
+	background-color:#6EBB91;
+	height:50px;
+	padding: inherit;
+}/* guarda que en la línea 116 también estás llamando a la cabecera!!! tienen que estar todas las propiedades juntas, dejá la cabecera acá pero tenés que elegir cuál es la mejor forma*/
+
 header {
 	background-color: white;
 	padding: 10px 20px;
@@ -26,14 +29,14 @@ h1 {
 	margin:0px 0px 0px 20px;
 	font-size: 28px;
 	color:white;
+	font-family: "Ubuntu", "sans-serif";
 }
+
 .botonera {
 	width: 100%;
 	height: 50px; /* no está bueno tener alturas fijas, en general el tamaño de las cosas los tiene que dar el mismo contenido */
 	background-color:#C7E9B2;
-	padding-top: 33px;
-	padding-left: 1px;
-	padding-right: 1px;
+	padding: 33px 0px 33px 0px;
 } /* buen comienzo con los porcentajes, ahora hay un problema, está tomando el 100% de la página + 1 pixel de padding left + 1 pixel de padding right, lo que nos da de resultado, por ejemplo, si tengo una pantalla de 1920px de ancho, el tamaño de la botonera va a ser de 1922px porque no tiene ese extra en cuenta, lo que va a hacer que tengas scroll horizontal y eso es un error bastante grande. Para solucionar este problema, podés agregar la propiedad "box-sizing: border-box;" que establece "el tamaño de la caja tiene que tener en cuenta el borde que tengan margin y padding"
 
 También hay otra forma de tener mejor los paddings, en lugar de poner top left y right individualmente podés hacerlo en una sola línea así:
@@ -48,64 +51,79 @@ donde el primer valor pertence a top y bottom, y el segundo a left y right. Esta
 
 */
 
-nav ul {
-	list-style: none;
-	padding-left:618px; /*este padding es un montón, como regla general, si tu padding supera los 100px es muy probable que estés acomodando las cosas y no separandolas, y haya una opción más prolijas con flexbox. Acordate que el contenedor padre es el que ordena, así que probablemente el flex lo tenga el nav, y se lo tengas que aplicar a la botonera */
+li {
+	font-family: Nunito, Saira, Roboto, "sans-serif";
 }
 
-nav ul li {
-	display: inline; /* empezá a cambiar los inline por propiedades de flexbox */
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	 /*este padding es un montón, como regla general, si tu padding supera los 100px es muy probable que estés acomodando las cosas y no separandolas, y haya una opción más prolijas con flexbox. Acordate que el contenedor padre es el que ordena, así que probablemente el flex lo tenga el nav, y se lo tengas que aplicar a la botonera */
 }
 
 .botonera a {
 	text-decoration: none;
-	color: #000; /*el color está mal, le faltan dígitos*/
+	display: flex;
+	flex-direction: row;
+	color: #000000; /*el color está mal, le faltan dígitos*/
 	padding: 10px 20px;
+	margin: 10px 0px 10px 10px;
 	border: 1.5px solid white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	font-family: Nunito, Saira, Roboto, "sans-serif";
 }
 
 .botonera a:hover {
-	color: #fff; /*el color está mal, le faltan dígitos*/
+	color: #FFFFFF; /*el color está mal, le faltan dígitos*/
 	background-color:#A9D898;
 }
 
 .botonera a:active {
 	background-color:#8E452D;
-	color: #fff; /*el color está mal, le faltan dígitos*/
+	color: #FFFFFF; /*el color está mal, le faltan dígitos*/
 }
 
 .container {
-	max-width: 800px;
+	max-width: 600px;
 	margin: 40px auto;
 	padding: 20px;
 	border: 1px solid #8E452D;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	background-color: #fff;
-	position: relative; /*este position no está haciendo nada*/
+	background-color: #FFFFFF;
 }
+
+ul.informacion {
+	padding-top: 20px;
+	list-style: none;
+	line-height: 23px;
+}
+
 .profile-image {
 	float: left; /* float es una propiedad que va a quedar muy incómoda cuando veamos responsive. para lograr que la imagen esté al lado del div "info" necesitás aplicar flex al contenedor padre*/
-	width: 120px;
-	height: 120px;
-	border-radius: 100%;
+	width: 170px;
+	height: 170px;
+	border-radius: 5%;
 	overflow: hidden;
 	margin-right: 20px;
 }
+
 .profile-image img {
 	width: 100%;
 	height: 100%;
 	object-fit:cover; /* lo ideal con la imagen es que la edites por fuera del código y que tenga el tamaño final de la foto, hacela cuadradad para que quede bien, el border radius está bien */
 }
+
 .info {
-	margin-left: 180px; /* mucho padding por aca!!! */
+	margin-left: 210px; /* mucho padding por aca!!! */
 }
+
 h2 {
 	margin-top: 0;
-	font-size: 30px;
+	font-size: 26px;
 }
+
 p {
 	margin: 2px 0;
 	font-family: Nunito, Saira, Roboto, "sans-serif";
@@ -126,40 +144,103 @@ h2 {
 	font-style: normal;
 }
 
-#cabecera {
-	background-color:#6EBB91;
-	width: 200%px;
-	height:50px;
-	padding: inherit;
-}
-
 section {
 	padding: 40px;
-	width: 400px; /* es más eficiente usar la propiedad "max-width" para medidas fijas cuando el width supera los 300px porque cuando pasemos a mobile esto va a molestar un montón */
+	max-width: 10%; /* es más eficiente usar la propiedad "max-width" para medidas fijas cuando el width supera los 300px porque cuando pasemos a mobile esto va a molestar un montón */
 	border: 0.5px solid #6EBB91;
 	margin: 20px;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h3 {
+	font-family: "Ubuntu", "sans-serif";
 	font-size: 24px;
 	margin-bottom: 20px;
 }
+
 p {
 	font-size: 15px;
 	line-height: 1.6;
 }
 
 .cards {
-	display: flex; /* acá funcionaría muy bien la propiedad de wrap, fijate cómo funciona con el inspector y si podés mejorarlo con alguna otra propiedad de flex*/
+	display: flex;
+	flex-direction: row;
+	flex: wrap;
+	justify-content: center;/* acá funcionaría muy bien la propiedad de wrap, fijate cómo funciona con el inspector y si podés mejorarlo con alguna otra propiedad de flex*/
+}
+
+.trabajos {
+	padding: 50px 0px 50px 0px;
+	background-color:#C7E9B2;
+	margin: 60px 0px;
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+}
+
+h4 {
+	color:#000000;
+	font-family: "Ubuntu", "sans-serif";
+	font-size: 24px;
+	padding: 0px 60px
+}
+
+.contenido h3 {
+	color: #529E79;
+	margin: 25px 0px 7px 0px;
+	line-height: 20px;
+	font-size: 18px;
+}
+
+.contenido p{
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	margin: 5px 60px 5px 15px;
+	max-width: 70%;
+}
+
+.tps {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+}
+
+.caja img{
+	border: 1.5px solid white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+img {
+  transition: transform 0.2s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.a {
+	flex-grow: 0;
+	order:3; 
+}
+
+.b {
+	flex-grow: 0;
+	order:2; 
+}
+
+.c {
+	margin-right: -68px;
+	flex-grow: 0;
+	order:1; 
 }
 
 footer {
-	width: 100%;
-	height: 30px;
+	height: 40px;
 	background-color: #6EBB91;
-	padding: 5px 20px;
-	border-radius: 3px;
+	padding: 10px 20px 0px 20px;
 	justify-content: flex-end;
 	margin-top: 60px;
 	color: white;
