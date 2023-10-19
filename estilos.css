@@ -9,12 +9,16 @@
 	padding: 0px;
 }
 
+/*Cabecera*/
+
 #cabecera {
 	width: 100%;
 	background-color:#6EBB91;
 	height:50px;
 	padding: inherit;
 }
+
+/*Header*/
 
 header {
 	background-color: white;
@@ -31,11 +35,14 @@ h1 {
 	font-family: "Ubuntu", "sans-serif";
 }
 
+/*Botonera*/
+
 .botonera {
 	width: 100%;
 	height: 50px;
 	background-color:#C7E9B2;
 	padding: 33px 0px 33px 0px;
+	position: sticky;
 }
 
 li {
@@ -71,6 +78,8 @@ nav ul {
 	background-color:#8E452D;
 	color: #FFFFFF; 
 }
+
+/*Perfil*/
 
 .container {
 	max-width: 600px;
@@ -133,6 +142,8 @@ h2 {
 	font-style: normal;
 }
 
+/*Datos sobre mi*/
+
 section {
 	padding: 40px;
 	max-width: 10%;
@@ -159,6 +170,80 @@ p {
 	flex: wrap;
 	justify-content: center;
 }
+
+/*Skills*/
+
+.habilidades {
+	display: flex;
+	flex-direction: row;
+	flex: wrap;
+	justify-content: center;
+}
+
+.habilidad {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 10px 0px 0px 40px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: #FFFFFF;
+}
+
+h4 { 
+	font-family: "Ubuntu", "sans-serif";
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.habilidad-etiqueta {
+	font-family: "Roboto", "sans-serif";
+		
+}
+
+.habilidad-barra {
+  width: 100%;
+  background-color: #f0f0f0;
+  height: 20px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.progreso {
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+}
+
+.photoshop-progreso {
+  background-color: #6EBB91;
+  animation: fill-progress 4s ease forwards;
+}
+
+.illustrator-progreso {
+  background-color: #6EBB91;
+  animation: fill-progress 4s ease forwards;
+  animation-delay: 0.5s; 
+}
+
+.indesign-progreso {
+  background-color: #6EBB91;
+  animation: fill-progress 4s ease forwards;
+  animation-delay: 1s; 
+}
+
+.html-progreso {
+  background-color: #6EBB91;
+  animation: fill-progress 4s ease forwards;
+  animation-delay: 1.5s; 
+}
+
+@keyframes fill-progress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/*Proyectos*/
 
 .trabajos {
 	padding: 50px 0px 50px 0px;
@@ -226,11 +311,71 @@ img:hover {
 	order:1; 
 }
 
+h5 {
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-family: "Ubuntu", "sans-serif";
+}
+
+aside p {
+	margin-top: 40px;
+}
+
+/*Video multimedia*/
+
+.video{
+	display: flex;
+	margin-top: 60px;
+	padding: 30px;
+	justify-content: center;
+	gap: 37px;
+	align-self: stretch;
+}
+
+.contenido-video{
+	display: flex;
+	padding: 25px 40px 0px 40px;
+	align-items:center;
+}
+
+.contenido-video video{
+	width: 820px;
+	height: 462px;
+	border-radius: 10px;
+	border: 1px solid #8E452D;
+	background: #000000;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.contenido-info {
+	margin: 40px 0px;
+	display: flex;
+	padding: 20px 20px;
+	flex-wrap: wrap;
+}
+.contenido-info h4{
+	display: flex;
+	padding: 10px 20px;
+	color:#000000;
+	font-size: 30px;
+	font-family: "Ubuntu", "sans-serif";
+}
+
+.contenido-info p{
+	display: flex;
+	width: auto;
+	padding: 0px 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Footer*/
+
 footer {
-	height: 40px;
+	display: flex;
+	flex-direction:column;
 	background-color: #6EBB91;
-	padding: 10px 20px 0px 20px;
-	justify-content: flex-end;
+	padding: 40px 0px 40px 20px;
+	justify-content:center;
 	margin-top: 60px;
 	color: white;
 }

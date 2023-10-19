@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Mi Curr&iacute;culum Vitae - Muñoz</title>
 <link href="estilos.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="img/faviconflor.ico">
 </head>
 <body>
 	<header id="cabecera">
@@ -15,13 +16,13 @@
 			<li><a href="#educacion">Educaci&oacute;n</a></li>
 			<li><a href="#idioma">Idioma</a></li>
 			<li><a href="#trabajo">Trabajo</a></li>
-			<li><a href="#informatica">Inform&aacute;tica</a></li>	
+			<li><a href="#habilidades">Habilidades</a></li>	
 			<li><a href="#trabajos">Proyectos</a></li>	
 		</ul>
 	</nav>
 	<main>
 	<div class="container"> 
-		<div class="profile-image">
+	  <div class="profile-image">
 			<img src="img/lusentada.jpg" width="300px" height="300px" alt="lusentada">
 		</div>
 		<div class="info">
@@ -32,9 +33,9 @@
 				<li>Argentina, Buenos Aires, Banfield</li>
 				<li>Email: luayelen2420@gmail.com</li>
 				<li>Tel&eacute;fono: +54 1130772406</li>
-				</ul>
-		</div>
-		</div>
+		  </ul>
+	  </div>
+	  </div>
 		<article class="cards">
 			<section id="sobremi">
 				<h3>Sobre mí</h3>
@@ -47,22 +48,43 @@
 			</section>
 			<section id="idioma">
 				<h3>Idioma</h3>
-					<p>Espa&ntilde;ol - Oral y escrito nativo.</p>
-					<p>Inglés - Oral y escrito avanzado.</p>
+					<p><span style="color:#6EBB91">Espa&ntilde;ol</span> - Oral y escrito nativo.</p>
+					<p><span style="color:#6EBB91">Inglés</span> - Oral y escrito avanzado.</p>
 			</section>
 			<section id="trabajo">
 				<h3>Trabajo</h3>
 					<p>Actualmente me encuentro en una nueva etapa trabajando para la empresa Mercado Libre S.R.L como Representante de Customer Experience. Ingres&eacute; a la empresa a principios de Abril del a&ntilde;o 2023. </p>
 			</section>
-			<section id="informatica">
-				<h3>Inform&aacute;tica</h3>
-				<ul class="listadeprogramas">
-					<li><p>Office (Word, Power Point, Excel) Conocimiento básico.</p></li>
-					<li><p>Google Drive (Docs, Forms, Gmail, Drive) Conocimiento básico.</p></li>
-					<li><p>Adobe (Illustrator, InDesign, Photoshop) Conocimiento intermedio.</p></li>
-					<li><p>Redes Sociales (Facebook, Twitter, Instagram, TikTok, Pinterest) Conocimiento intermedio.</p></li>
-				</ul>
-			</section>
+		</article>
+		<article id="habilidades">
+			<h4>Habilidades</h4>
+				<div class="habilidad">
+					<div class="habilidad-etiqueta">Photoshop</div>
+    				<div class="habilidad-barra">
+      					<div class="progreso photoshop-progreso"></div>
+    				</div>
+  				</div>
+
+  				<div class="habilidad">
+					<div class="habilidad-etiqueta">Illustrator</div>
+					<div class="habilidad-barra">
+      					<div class="progreso illustrator-progreso"></div>
+					</div>
+				</div>
+
+				<div class="habilidad">
+					<div class="habilidad-etiqueta">Indesign</div>
+					<div class="habilidad-barra">
+						<div class="progreso indesign-progreso"></div>
+					</div>
+				</div>
+
+				<div class="habilidad">
+					<div class="habilidad-etiqueta">HTML</div>
+					<div class="habilidad-barra">
+						<div class="progreso html-progreso"></div>
+					</div>
+				</div>
 		</article>
 		<aside>
 			<article class="trabajos" id="trabajos">
@@ -94,10 +116,31 @@
 				</div>
 			</div>
 			</article>
+			<seccion class="video">
+				<div class="contenido-info">
+					<h4>Un poco de mi hobby</h4>
+					<p>Además de gustarme el diseño gráfico, como he comentado con anterioridad, también me gusta mucho jugar videojuegos. Como es algo que me gustaría destacar además de los diseños que he logrado, debo decir que me considero buena en ello y una de mis aficiones de pequeña era convertirme algún día en jugadora profesional. Soy fanática de la categoría de Shooters y MMO.</p>
+				</div>
+				<div class="contenido-video">
+					<video src="img/d2.mp4" autoplay loop width="1920" height="1080"></video>
+				</div>
+			</seccion>	
 		</aside>
 	</main>
 	<footer>
-		<p>Segundo Cuatrimestre 2023 - Computación III - Cátedra Wischñevsky</p>
+		<h5>Contacto</h5>
+    		<form action="enviar_formulario.php" method="POST">
+        		<label for="nombre">Nombre:</label><br>
+        		<input type="text" id="nombre" name="nombre"><br> 
+        		<label for="email">Email:</label><br>
+        		<input type="email" id="email" name="email"><br>
+				<label for="mensaje">Mensaje:</label><br>
+				<textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+				<input type="submit" value="Enviar">
+    		</form>
+		<aside>
+			<p>Segundo Cuatrimestre 2023 - Computación III - Cátedra Wischñevsky</p>
+		</aside>
 	</footer>
 </body>
 </html>
