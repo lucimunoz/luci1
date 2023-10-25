@@ -8,6 +8,11 @@
 	margin: 0px;
 	padding: 0px;
 }
+/*fijate que en las fotos en las de abajo tener margenes de 40 px que hace que no te quede bien el flex wrap.
+@keyframes fill-progress { /*en este caso para que no llegue la barra completa de habilidades tendrias que poner en vez de 100%, 90%.
+en el formulario tener que borrar
+.formulario {
+    background-image: url(img/patron.png);*/
 
 /*Cabecera*/
 
@@ -230,7 +235,7 @@ h4 {
   animation-delay: 1.5s; 
 }
 
-@keyframes fill-progress {
+@keyframes fill-progress { /*en este caso para que no llegue la barra completa de habilidades tendrias que poner en vez de 100%, 90%*/
   from { width: 0; }
   to { width: 100%; }
 }
