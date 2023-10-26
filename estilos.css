@@ -4,15 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@500&display=swap');
 
+
+
 *{
 	margin: 0px;
 	padding: 0px;
+	cursor: url("img/navegacion.png"),auto; 
 }
-/*fijate que en las fotos en las de abajo tener margenes de 40 px que hace que no te quede bien el flex wrap.
-@keyframes fill-progress { /*en este caso para que no llegue la barra completa de habilidades tendrias que poner en vez de 100%, 90%.
-en el formulario tener que borrar
-.formulario {
-    background-image: url(img/patron.png);*/
 
 /*Cabecera*/
 
@@ -29,13 +27,16 @@ header {
 	background-color: white;
 	padding: 10px 20px;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 
+#cabecera img {
+	padding: 0px 0px 0px 25px;
+}
+
 h1 {
-	margin:0px 0px 0px 20px;
-	font-size: 28px;
+	margin:0px 0px 0px 10px;
+	font-size: 25px;
 	color:white;
 	font-family: "Ubuntu", "sans-serif";
 }
@@ -85,6 +86,17 @@ nav ul {
 .botonera a:active {
 	background-color:#6EBB91;
 	color: #FFFFFF; 
+}
+
+.redes {
+	display: flex;
+	align-content: center;
+	justify-content:space-between;
+	background-color: #6EBB91;
+	width: 6%;
+	height: 44px;
+	padding: 5px 15px;
+	border-bottom-right-radius: 10px; 
 }
 
 /*Perfil*/
@@ -212,29 +224,45 @@ h4 {
 }
 
 .photoshop-progreso {
-  background-color: #6EBB91;
-  animation: fill-progress 4s ease forwards;
+	background-color: #6EBB91;
+	animation: progreso-ps 4s ease forwards;
+	animation-delay: 2s; 
 }
 
 .illustrator-progreso {
-  background-color: #6EBB91;
-  animation: fill-progress 4s ease forwards;
-  animation-delay: 0.5s; 
+	background-color: #6EBB91;
+	animation: progreso-ai 4s ease forwards;
+	animation-delay: 3s; 
 }
 
 .indesign-progreso {
-  background-color: #6EBB91;
-  animation: fill-progress 4s ease forwards;
-  animation-delay: 1s; 
+	background-color: #6EBB91;
+	animation: progreso-id 4s ease forwards;
+	animation-delay: 4s; 
 }
 
 .html-progreso {
-  background-color: #6EBB91;
-  animation: fill-progress 4s ease forwards;
-  animation-delay: 1.5s; 
+	background-color: #6EBB91;
+	animation: progreso-dw 4s ease forwards;
+	animation-delay: 5s; 
 }
 
-@keyframes fill-progress { /*en este caso para que no llegue la barra completa de habilidades tendrias que poner en vez de 100%, 90%*/
+@keyframes progreso-ps {
+  from { width: 0; }
+  to { width: 70%; }
+}
+
+@keyframes progreso-ai {
+  from { width: 0; }
+  to { width: 85%; }
+}
+
+@keyframes progreso-id {
+  from { width: 0; }
+  to { width: 75%; }
+}
+
+@keyframes progreso-dw {
   from { width: 0; }
   to { width: 50%; }
 }
@@ -244,7 +272,7 @@ h4 {
 .trabajos {
 	padding: 50px 0px 50px 0px;
 	background-color:#C7E9B2;
-	margin: 60px 0px;
+	margin: 60px 0px 0px;
 	display: flex;
 	flex-direction:row;
 	justify-content: center;
@@ -274,7 +302,7 @@ h5 {
 
 .tps {
 	display: flex;
-	justify-content: center;
+	justify-content:flex-start;
 	flex-wrap:wrap;
 }
 
@@ -316,11 +344,6 @@ img:hover {
 	order:5;
 }
 
-.f {
-	order:6;
-}
-
-
 h6 {
 	font-size: 20px;
 	margin-bottom: 20px;
@@ -336,8 +359,8 @@ aside p {
 #miniaturas {
 	display: flex;
 	justify-content: center;
-	background:#EDEDED;
-	width: auto;
+	background:#6EBB91;
+	height: 200px;
 }
 
 #galeria {
@@ -430,7 +453,7 @@ aside p {
 	width: 820px;
 	height: 462px;
 	border-radius: 10px;
-	border: 1px solid #8E452D;
+	border: 4px solid #C7E9B2;
 	background: #000000;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
