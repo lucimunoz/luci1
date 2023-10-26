@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="adelante" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #6ebb92;
+        opacity: .74;
+      }
+    </style>
+  </defs>
+  <circle class="cls-2" cx="20" cy="20" r="20"/>
+  <g>
+    <path class="cls-1" d="m31.26,16.85l-7.26-7.26c-.52-.52-1.41-.15-1.41.58l-.02,11.01v3.53c0,.73.89,1.1,1.41.58l7.28-7.28c.32-.32.32-.84,0-1.17Z"/>
+    <path class="cls-1" d="m10.89,19.21c-4.39,6.31-1.38,11.44-1.38,11.44-.35-9.32,13.07-9.47,13.07-9.47v-7.69c-7.1,0-11.69,5.72-11.69,5.72Z"/>
+  </g>
+</svg>

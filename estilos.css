@@ -144,13 +144,12 @@ h2 {
 
 /*Datos sobre mi*/
 
-section {
+.yo, .educo, .lenguaje, .dedicacion {
 	padding: 40px;
 	max-width: 10%;
 	margin: 20px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .cards {
 	display: flex;
@@ -232,7 +231,7 @@ h4 {
 
 @keyframes fill-progress {
   from { width: 0; }
-  to { width: 100%; }
+  to { width: 50%; }
 }
 
 /*Proyectos*/
@@ -298,25 +297,21 @@ img:hover {
 }
 
 .c {
-	margin-right: -68px;
 	flex-grow: 0;
 	order:1;
 }
 
 .d {
 	flex-grow: 0;
-	margin-top: 40px;
 	order:4;
 }
 
 .e {
 	flex-grow: 0;
-	margin: 40px;
 	order:5;
 }
 
 .f {
-	margin: 40px;
 	order:6;
 }
 
@@ -331,11 +326,91 @@ aside p {
 	margin-top: 40px;
 }
 
+/*Galeria proyecto abuela*/
+
+#miniaturas {
+	display: flex;
+	justify-content: center;
+	background:#EDEDED;
+	width: auto;
+}
+
+#galeria {
+	display: none;
+	width: 100%;
+	justify-content: center;
+	height: 100vh;
+	background-color: #000000;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
+
+#galeria-oculta {
+	display: flex;
+	width: 100%;
+	max-width: 1450px;
+	overflow: hidden;
+	z-index: 20;
+}
+
+.fraccion-galeria {
+	display: flex;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 100%;
+	min-width: 1450px;
+	height: 100vh;
+	justify-content: space-between;
+}
+
+.primer-ultima-flecha {
+	visibility: hidden;
+}
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 2%;
+}
+
+#foto-1 {
+	background-image: url("img/abuela1.jpg");
+}
+
+#foto-2 {
+	background-image: url("img/abuela2.jpg")
+}
+
+#foto-3 {
+	background-image:url("img/abuela3.jpg");
+}
+
+#foto-4 {
+	background-image:url("img/abuela4.jpg")
+}
+
+#foto-5 {
+	background-image:url("img/abuela5.jpg")
+}
+
+#fondo-galeria {
+	background-color: black;
+	opacity: 0.9;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 0;
+}
+
 /*Video multimedia*/
 
 .video{
 	display: flex;
-	margin-top: 60px;
+	margin: 40px 0px 60px;
 	padding: 30px;
 	justify-content: center;
 }
@@ -361,7 +436,8 @@ aside p {
 }
 .contenido-info h4{
 	display: flex;
-	padding: 10px 5px;
+	justify-content: center;
+	padding: 10px 0px;
 	color:#000000;
 	font-size: 30px;
 	font-family: "Ubuntu", "sans-serif";
@@ -399,13 +475,13 @@ width: 50%;
 font-family: "Nunito, Saira, Roboto",sans-serif;
 margin: 0 auto;
 margin-top: 0px;
-padding: 20px;
+padding: 100px;
 border-radius: 15px;
 }
 
 form {
 font-family: "Nunito, Saira, Roboto",sans-serif;
-padding: 0;
+padding: 40px 0px;
 width: 90%;
 border-radius: 15px;
 margin: 0 auto;
@@ -480,6 +556,22 @@ footer {
 	background-color: #6EBB91;
 	padding: 5px 0px 30px 20px;
 	justify-content: center;
-	margin-top: 60px;
+	margin-top: 0px;
 	color: white;
+}
+
+/*Media Responsive*/
+
+@media screen and (max-width:600px) {
+	body {
+		font-size: 0.75em;
+	}
+	
+	.botonera {
+		padding: 10px;
+	}
+	
+	main {
+		flex-direction: column;
+	}
 }

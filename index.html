@@ -5,6 +5,17 @@
 <title>Mi Curr&iacute;culum Vitae - Muñoz</title>
 <link href="estilos.css" rel="stylesheet" type="text/css">
 <link rel="icon" href="img/faviconflor.ico">
+<script>
+	function cambiarDisplay(visibilidadNueva){
+		document.getElementById("galeria").style.display = visibilidadNueva
+	}
+	function mostrarGaleria(){
+		cambiarDisplay('flex')
+	}
+		function ocultarGaleria(){
+		cambiarDisplay('none')
+	}
+</script>
 </head>
 <body>
 	<header id="cabecera">
@@ -37,21 +48,21 @@
 	  </div>
 	  </div>
 		<article class="cards">
-			<section>
+			<section class="yo">
 				<h3>Sobre mí</h3>
 					<p>Me llamo Luc&iacute;a, soy estudiante de la carrera diseño y comunicación visual en la Universidad de Lan&uacute;s. Soy una persona que busca afrontar una nueva etapa dispuesta a poner en valor todos mis conocimientos y habilidades. Busco aprender y superarme d&iacute;a a d&iacute;a. Tambi&eacute;n soy amante de los juegos online y el dise&ntilde;o de personajes para ellos.</p>
 			</section>
-			<section>
+			<section class="educo">
 				<h3>Educación</h3>
 					<p>Escolarizada con Secundario Completo. Instituto Sagrada Familia, Banfield, 2019.</p>
 					<p>Licenciatura en Diseño y Comunicación Visual, actualmente en curso. Universidad Nacional de Lanús, 2020.</p>
 			</section>
-			<section>
+			<section class="lenguaje">
 				<h3>Idioma</h3>
 					<p><span style="color:#6EBB91">Espa&ntilde;ol</span> - Oral y escrito nativo.</p>
 					<p><span style="color:#6EBB91">Inglés</span> - Oral y escrito avanzado.</p>
 			</section>
-			<section>
+			<section class="dedicacion">
 				<h3>Trabajo</h3>
 					<p>Actualmente me encuentro en una nueva etapa trabajando para la empresa Mercado Libre S.R.L como Representante de Customer Experience. Ingres&eacute; a la empresa a principios de Abril del a&ntilde;o 2023. </p>
 			</section>
@@ -60,28 +71,25 @@
 			<h4>Habilidades</h4>
 				<div class="habilidad">
 					<div class="habilidad-etiqueta">Photoshop</div>
-    				<div class="habilidad-barra">
-      					<div class="progreso photoshop-progreso"></div>
-    				</div>
-  				</div>
-
-  				<div class="habilidad">
-					<div class="habilidad-etiqueta">Illustrator</div>
-					<div class="habilidad-barra">
-      					<div class="progreso illustrator-progreso"></div>
+						<div class="habilidad-barra">
+						<div class="progreso photoshop-progreso"></div>
 					</div>
 				</div>
-
+				<div class="habilidad">
+					<div class="habilidad-etiqueta">Illustrator</div>
+						<div class="habilidad-barra">
+						<div class="progreso illustrator-progreso"></div>
+					</div>
+				</div>
 				<div class="habilidad">
 					<div class="habilidad-etiqueta">Indesign</div>
-					<div class="habilidad-barra">
+						<div class="habilidad-barra">
 						<div class="progreso indesign-progreso"></div>
 					</div>
 				</div>
-
 				<div class="habilidad">
 					<div class="habilidad-etiqueta">HTML</div>
-					<div class="habilidad-barra">
+						<div class="habilidad-barra">
 						<div class="progreso html-progreso"></div>
 					</div>
 				</div>
@@ -128,18 +136,46 @@
 						 <h3>PINTURA LIBRE</h3>
 							<p>Composición de tres pinturas con relación.</p>
 							<p>Realizado en Medios Expresivos III.</p>
-					 </div>
-				</div>
-				<div class="caja f">
-					<img src="img/foto72ppi.jpg" width="300px" height="300px" alt="tp3tipo"/>
-					 <div class="contenido">
-						 <h3>LARGA ESPERA</h3>
-							<p>Se creó una composición fotográfica que se relacione entre otras.</p>
-							<p>Realizado en Fotografía.</p>
 					</div>
 				</div>
 			</div>
 			</article>
+			<section id="miniaturas">
+				<a href="#foto-1"><img src="img/abuela1.jpg" alt="abuelapie" width="200px" height="200px" onClick="mostrarGaleria()"></a>
+				<a href="#foto-2"><img src="img/abuela2.jpg" width="200px" height="200px" alt="abuelamano" onClick="mostrarGaleria()"></a>
+				<a href="#foto-3"><img src="img/abuela3.jpg" width="200px" height="200px" alt="abuelabrazo" onClick="mostrarGaleria()"></a>
+				<a href="#foto-4"><img src="img/abuela4.jpg" width="200px" height="200px" alt="antiguo" onClick="mostrarGaleria()"></a>
+				<a href="#foto-5"><img src="img/abuela5.jpg" width="200px" height="200px" alt="antiguo" onClick="mostrarGaleria()"></a>
+			</section>
+			<section id="galeria">
+				<ul id="galeria-oculta">
+					<li class="fraccion-galeria" id="foto-1">
+						<a href="#" class="primer-ultima-flecha"><img src="img/atras.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/cerrar.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-2"><img src="img/adelante.svg" width="50px" height="50px" alt="Siguiente"></a>
+					</li>
+					<li class="fraccion-galeria" id="foto-2">
+						<a href="#foto-1"><img src="img/atras.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/cerrar.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-3"><img src="img/adelante.svg" width="50px" height="50px" alt="Siguiente"></a>
+					</li>
+					<li class="fraccion-galeria" id="foto-3">
+						<a href="#foto-2"><img src="img/atras.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/cerrar.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-4" class="primer-ultima-flecha"><img src="img/adelante.svg" width="50px" height="50px" alt="Siguiente"></a>
+					</li>
+						<li class="fraccion-galeria" id="foto-4">
+						<a href="#foto-3"><img src="img/atras.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/cerrar.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-5" class="primer-ultima-flecha"><img src="img/adelante.svg" width="50px" height="50px" alt="Siguiente"></a>
+					</li>
+						<li class="fraccion-galeria" id="foto-5">
+						<a href="#foto-4"><img src="img/atras.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/cerrar.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#" class="primer-ultima-flecha"><img src="img/adelante.svg" width="50px" height="50px" alt="Siguiente"></a>
+					</li>
+				</ul>
+			</section>
 			<seccion class="video" id="hobby">
 				<div class="contenido-info">
 					<h4>Mi Hobby</h4>
