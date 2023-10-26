@@ -1,20 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="adelante" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-
-      .cls-2 {
-        fill: #6ebb92;
-        opacity: .74;
-      }
-    </style>
-  </defs>
-  <circle class="cls-2" cx="20" cy="20" r="20"/>
-  <g>
-    <path class="cls-1" d="m31.26,16.85l-7.26-7.26c-.52-.52-1.41-.15-1.41.58l-.02,11.01v3.53c0,.73.89,1.1,1.41.58l7.28-7.28c.32-.32.32-.84,0-1.17Z"/>
-    <path class="cls-1" d="m10.89,19.21c-4.39,6.31-1.38,11.44-1.38,11.44-.35-9.32,13.07-9.47,13.07-9.47v-7.69c-7.1,0-11.69,5.72-11.69,5.72Z"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="adelante" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.74;fill:#FFFFFF;enable-background:new    ;}
+</style>
+<circle class="st0" cx="20" cy="20" r="20"/>
+<g>
+	<path d="M31.3,16.9L24,9.6c-0.5-0.5-1.4-0.1-1.4,0.6l0,11v3.5c0,0.7,0.9,1.1,1.4,0.6l7.3-7.3C31.6,17.7,31.6,17.2,31.3,16.9
+		L31.3,16.9z"/>
+	<path d="M10.9,19.2c-4.4,6.3-1.4,11.4-1.4,11.4c-0.4-9.3,13.1-9.5,13.1-9.5v-7.7C15.5,13.5,10.9,19.2,10.9,19.2z"/>
+</g>
 </svg>
