@@ -275,9 +275,9 @@ h4 {
 /*Proyectos*/
 
 .trabajos {
-	padding: 50px 0px 50px 0px;
+	padding: 70px 0px 20px 0px;
 	background-color:#C7E9B2;
-	margin: 60px 0px 0px;
+	margin: 90px 0px 0px;
 	display: flex;
 	flex-direction:row;
 	justify-content: center;
@@ -519,9 +519,11 @@ h8 {
 }
 
 h7 {
+display: flex;
+justify-content: center;
 text-align: center;
 color: black;
-margin: 40px;
+margin: 20px;
 font-family: 'Roboto', sans-serif;
 font-size: 25px;
 padding: 0px;
@@ -584,7 +586,7 @@ line-height: 150%;
 resize: vertical;
 }
 
-#button-blue {
+#boton-verde {
 font-family: "Nunito, Saira, Roboto",sans-serif;
 font-weight: 400;
 width: 100%;
@@ -599,7 +601,7 @@ margin-top: -4px;
 transition: .3s ease;
 }
 
-#button-blue:hover {
+#boton-verde:hover {
 background-color: rgba(0, 0, 0, 0);
 color: black;
 background: #6EBB91;
@@ -613,24 +615,79 @@ color: #6EBB91;
 footer {
 	display: flex;
 	background-color: #6EBB91;
-	padding: 5px 0px 30px 20px;
+	padding: 0px 0px 30px 0px;
 	justify-content: center;
-	margin-top: 0px;
 	color: white;
 }
 
 /*Media Responsive*/
 
 @media screen and (max-width:600px) {
-	body {
-		font-size: 0.75em;
+	
+	header {
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content:flex-start;
 	}
 	
 	.botonera {
-		padding: 10px;
+		width: 100%;
+		padding: 10px 0px 90px;
+		height: 30px;
 	}
 	
-	main {
+		nav, ul, li {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content:center;
+	}
+	
+	body {
+		font-size: 0.70em;
+		paddding:30px 30px;
+		background-size: 200% auto;
+	}
+	
+	.redes {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		height:10px;
+		padding: 40px 20px;
+	}
+	
+	.formulario {
 		flex-direction: column;
+		justify-content: center;
+	}
+	
+	h7 {
+		font-size:0.90em;
+	}
+	
+	.feedback-input {
+		font-size:1em;
+	}
+	
+	#button-blue {
+		font-size:0.70em;
+	}
+	
+	.form {
+		font-size:2.20em; 
+	}
+	
+	footer {
+		padding: 0px 10px 20px 20px;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+	
+	footer p {
+		padding: 0px 0px 5px;
+		font-size:1.10em;
 	}
 }
